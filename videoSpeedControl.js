@@ -25,7 +25,7 @@ function onUrlChange() {
 }
 
 var videoEl = null;
-    var minSpeed = 0.5;
+var minSpeed = 0.5;
 var maxSpeed = 3;
 var speedStep = 0.25;
 var currentSpeed = null;

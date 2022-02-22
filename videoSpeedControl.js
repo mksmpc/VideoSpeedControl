@@ -10,6 +10,11 @@
 // ==/UserScript==
 
 
+var minSpeed = 0.5;
+var maxSpeed = 3;
+var speedStep = 0.25;
+
+
 let lastUrl = location.href;
 new MutationObserver(() => {
     const url = location.href;
@@ -24,15 +29,14 @@ function onUrlChange() {
     getVideoElement(true);
 }
 
+
 var videoEl = null;
-var minSpeed = 0.5;
-var maxSpeed = 3;
-var speedStep = 0.25;
 var currentSpeed = null;
 
 function getElementByXpath(path) {
     return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 }
+
 
 function getVideoElement(force = false){
     if (videoEl == null || force) {
@@ -60,6 +64,7 @@ function addKeyEvent(func, ...keyCode) {
         }
     });
 }
+
 
 function readyHead(fn) {
     if (document.body) { // если есть body, значит head готов

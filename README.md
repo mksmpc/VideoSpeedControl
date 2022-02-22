@@ -11,7 +11,7 @@ Extention for browsers, that provide control on video speed by hotkeys.
 5. Profit
 
 [tampermonkey]: https://www.tampermonkey.net/
-[script]: /raw/videoSpeedControl.js
+[script]: /videoSpeedControl.js
 
 
 ## Usage

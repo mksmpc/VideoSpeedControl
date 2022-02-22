@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Video Speed Control
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/mksmpc/VideoSpeedControl
 // @version      0.3
 // @description  Change speed on any video by 'CTRL + <' and 'CTRL + >'
 // @author       makesomepeace

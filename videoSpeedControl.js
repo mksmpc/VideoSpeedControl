@@ -104,10 +104,11 @@ function rewindVideo(rewindOffset) {
 rewindVideo
 
 
-function addKeyEvent(func, ...keyCode) {
+function addKeyEvent(func, keyCode, isWithShift = false) {
     document.addEventListener('keydown', function(event){
-        if ((event.ctrlKey || event.metaKey) && event.code == keyCode ) {
+        if ((event.ctrlKey || event.metaKey) && (isWithShift == event.shiftKey) && event.code == keyCode ) {
             func();
+            event.preventDefault();
         }
     });
 }
@@ -136,6 +137,7 @@ readyHead(() => {
     addKeyEvent(() => changeSpeed(speedStep), 'Period');
     addKeyEvent(() => changeSpeed(speedStep), 'ArrowUp');
 
+    // addKeyEvent(() => changeSpeed(-speedStep), 'Period', true);
     addKeyEvent(() => changeSpeed(-speedStep), 'Comma');
     addKeyEvent(() => changeSpeed(-speedStep), 'ArrowDown');
 
